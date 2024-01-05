@@ -11,7 +11,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve("src", "index.ts"),
-      name: "pkg-placeholder",
+      name: "XhCountTo",
       formats: ["es", "cjs", "umd"],
       fileName: "index"
     },

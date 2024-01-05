@@ -1,5 +1,5 @@
 <template>
-  <span>pkg-placeholder</span>
+  <span>xiaohe-vue-count-to</span>
 </template>
 
 <script lang="ts" setup>

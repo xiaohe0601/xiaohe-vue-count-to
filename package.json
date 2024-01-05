@@ -1,18 +1,18 @@
 {
-  "name": "pkg-placeholder",
+  "name": "xiaohe-vue-count-to",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@8.12.1",
-  "description": "_description_",
+  "description": "⏱️ 一个实现数字平滑变化的Vue小组件",
   "author": "xiaohe0601 <HeDianGeng0601@outlook.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/xiaohe0601",
-  "homepage": "https://github.com/xiaohe0601/pkg-placeholder#readme",
+  "homepage": "https://github.com/xiaohe0601/xiaohe-vue-count-to#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiaohe0601/pkg-placeholder.git"
+    "url": "git+https://github.com/xiaohe0601/xiaohe-vue-count-to.git"
   },
-  "bugs": "https://github.com/xiaohe0601/pkg-placeholder/issues",
+  "bugs": "https://github.com/xiaohe0601/xiaohe-vue-count-to/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
