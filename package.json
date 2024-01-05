@@ -13,7 +13,13 @@
     "url": "git+https://github.com/xiaohe0601/xiaohe-vue-count-to.git"
   },
   "bugs": "https://github.com/xiaohe0601/xiaohe-vue-count-to/issues",
-  "keywords": [],
+  "keywords": [
+    "xiaohe",
+    "count-to",
+    "bezier",
+    "transition",
+    "animation"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
