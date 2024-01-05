@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      xiaohe-transition:
+        specifier: ^1.0.5
+        version: 1.0.5
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.6.0
@@ -2591,6 +2595,10 @@ packages:
   /balanced-match@2.0.0:
     resolution: {integrity: sha512-1ugUSr8BHXRnK23KfuYS+gVMC3LB8QGH9W1iGtDPsNWoQbgtXSExkBu2aDR4epiGWZOjZsj6lDl/N/AqqTC3UA==}
     dev: true
+
+  /bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
+    dev: false
 
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
@@ -6425,6 +6433,12 @@ packages:
       imurmurhash: 0.1.4
       signal-exit: 4.1.0
     dev: true
+
+  /xiaohe-transition@1.0.5:
+    resolution: {integrity: sha512-NZSzQgSQvO1ApUNS1QpJGlhG8Mk+chqPwzGMTP70Ku6LxQ2sYeyGz2NSmnQpNX4x8zAVrPCORZjIgcl2J6m0mQ==}
+    dependencies:
+      bezier-easing: 2.1.0
+    dev: false
 
   /xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}

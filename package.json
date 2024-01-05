@@ -56,6 +56,9 @@
   "peerDependencies": {
     "vue": ">=3.0.0"
   },
+  "dependencies": {
+    "xiaohe-transition": "^1.0.5"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.0",
     "@antfu/ni": "^0.21.12",
