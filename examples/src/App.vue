@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
-import { CountTo } from "../../src/index.ts";
+import { CountTo } from "xiaohe-vue-count-to";
 
 const pandora = ref<number>(0);
 
