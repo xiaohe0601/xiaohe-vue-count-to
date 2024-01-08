@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import type { TransitionOptions } from "xiaohe-transition";
 import { BezierCurvePreset, Transition } from "xiaohe-transition";
-import { computed, onUnmounted, ref, watch } from "vue";
+import { computed, onUnmounted, ref, watch } from "vue-demi";
 import type { NumberLike } from "../../types.ts";
 import type { CountToEmits, CountToProps, CountToSlots } from "./types.ts";
 

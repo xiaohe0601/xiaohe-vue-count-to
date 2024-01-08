@@ -24,6 +24,9 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    exclude: ["vue-demi"]
+  },
   plugins: [
     VuePlugin(),
     DtsPlugin({

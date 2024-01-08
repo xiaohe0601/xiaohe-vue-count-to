@@ -57,11 +57,15 @@
     "style:fix": "stylelint src/**/*.{css,scss,vue,html} --aei --fix",
     "prepare": "simple-git-hooks"
   },
-  "peerDependencies": {
-    "vue": ">=3.0.0"
-  },
   "dependencies": {
+    "vue-demi": "^0.14.6",
     "xiaohe-transition": "^1.0.7"
+  },
+  "peerDependencies": {
+    "vue": ">=2.5.0 || >=3.0.0"
+  },
+  "optionalDependencies": {
+    "@vue/composition-api": "^1.7.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
