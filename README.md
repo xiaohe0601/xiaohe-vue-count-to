@@ -18,6 +18,7 @@
 
 - 🍜 支持非线性动画
 - 🍟 支持中途打断动画
+- 🐼 支持Vue 2/3
 - 🧀 支持TypeScript
 - 🍳 支持免费商用
 - 🥗 更多特性等你发掘...
@@ -40,6 +41,14 @@ yarn add xiaohe-vue-count-to
 
 ``` shell
 npm install xiaohe-vue-count-to
+```
+
+#### 另外
+
+> 如果 `Vue` 版本小于 `2.7`，还需要安装 `@vue/composition-api`
+
+``` shell
+pnpm add @vue/composition-api
 ```
 
 ### 🛹 使用
