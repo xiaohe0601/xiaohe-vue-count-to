@@ -1,13 +1,13 @@
 import path from "node:path";
 import { defineConfig } from "vite";
 import VuePlugin from "@vitejs/plugin-vue";
+import DtsPlugin from "vite-plugin-dts";
 
 function resolve(...paths: string[]): string {
   return path.resolve(__dirname, ...paths);
 }
 
 export default defineConfig({
-  plugins: [VuePlugin()],
   build: {
     lib: {
       entry: resolve("src", "index.ts"),
@@ -23,5 +23,11 @@ export default defineConfig({
         }
       }
     }
-  }
+  },
+  plugins: [
+    VuePlugin(),
+    DtsPlugin({
+      rollupTypes: true
+    })
+  ]
 });
