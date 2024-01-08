@@ -61,7 +61,7 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "xiaohe-transition": "^1.0.6"
+    "xiaohe-transition": "^1.0.7"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",

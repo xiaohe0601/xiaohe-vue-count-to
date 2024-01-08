@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       xiaohe-transition:
-        specifier: ^1.0.6
-        version: 1.0.6
+        specifier: ^1.0.7
+        version: 1.0.7
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.6.1
@@ -6615,8 +6615,8 @@ packages:
       signal-exit: 4.1.0
     dev: true
 
-  /xiaohe-transition@1.0.6:
-    resolution: {integrity: sha512-ZemyxHETur7Em3CB7zX6tIevp1/gmuJ6Mu++zl0tdnvB7+uiKxUjE5AhP0nQ/gd33BVW6uwDjGRq/K5368JTBA==}
+  /xiaohe-transition@1.0.7:
+    resolution: {integrity: sha512-kc+abEuxHHTzJj3jzurRCgtPLHeIbaUoDKYwAUQF2BxJaEXz2dXy1mxtSw6jYGXtqChi9J5ktMqULRP/b02N1w==}
     dependencies:
       bezier-easing: 2.1.0
     dev: false
