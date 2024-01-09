@@ -38,7 +38,7 @@ export default defineComponent({
       default: -1
     }
   },
-  emits: ["change", "started", "paused", "resumed", "stopped", "completed"],
+  emits: ["inited", "change", "started", "paused", "resumed", "stopped", "completed"],
   slots: Object as SlotsType<{
     default: { value: NumberLike; };
   }>,
@@ -77,6 +77,7 @@ export default defineComponent({
 
       emit("change", formatted, instance);
     });
+    emit("inited", transition);
 
     watch(options, (value) => {
       transition.options(value);

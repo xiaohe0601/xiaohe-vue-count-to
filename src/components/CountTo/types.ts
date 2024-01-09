@@ -36,6 +36,11 @@ export interface CountToProps {
 
 export interface CountToEmits {
   /**
+   * transition初始化完成
+   */
+  (e: "inited", instance: Transition): void;
+
+  /**
    * 数值变化
    */
   (e: "change", value: NumberLike, instance: Transition): void;

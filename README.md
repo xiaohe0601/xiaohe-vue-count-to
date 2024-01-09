@@ -94,6 +94,7 @@ onMounted(() => {
 
 |事件|说明|回调参数|
 |---|---|---|
+|inited|`transition` 初始化完成|(instance: `Transition`)|
 |change|数值变化|(value: `NumberLike`, instance: `Transition`)|
 |started|动画开始|(instance: `Transition`)|
 |paused|动画暂停|(instance: `Transition`)|
