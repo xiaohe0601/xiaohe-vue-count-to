@@ -4,6 +4,7 @@ import { computed, defineComponent, h, onUnmounted, ref, watch } from "vue-demi"
 import type { BezierCurve, TransitionOptions } from "xiaohe-transition";
 import { BezierCurvePreset, Transition } from "xiaohe-transition";
 import type { NumberLike } from "../../types.ts";
+import { CLASS_PREFIX } from "../../constant.ts";
 import type { BezierCurvePresetLike } from "./types.ts";
 
 export default defineComponent({
@@ -93,7 +94,7 @@ export default defineComponent({
     });
 
     return () => {
-      return h(slots.default, { value: tweened.value });
+      return h("div", { class: `${CLASS_PREFIX}-count-to` }, [h(slots.default, { value: tweened.value })]);
     };
   }
 });
