@@ -94,7 +94,7 @@ export default defineComponent({
     });
 
     return () => {
-      return h("div", { class: `${CLASS_PREFIX}-count-to` }, [h(slots.default, { value: tweened.value })]);
+      return h("div", { class: `${CLASS_PREFIX}-count-to` }, [slots.default?.({ value: tweened.value })]);
     };
   }
 });
