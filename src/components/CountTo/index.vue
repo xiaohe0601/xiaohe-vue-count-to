@@ -104,7 +104,7 @@ export default defineComponent({
       transition.destroy();
     });
 
-    expose({
+    expose?.({
       transition
     });
 
