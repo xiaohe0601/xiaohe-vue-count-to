@@ -37,23 +37,7 @@ export default defineComponent({
       default: -1
     }
   },
-  emits: {
-    started(payload: { instance: Transition; }) {
-      return payload != null;
-    },
-    paused(payload: { instance: Transition; }) {
-      return payload != null;
-    },
-    resumed(payload: { instance: Transition; }) {
-      return payload != null;
-    },
-    stopped(payload: { instance: Transition; }) {
-      return payload != null;
-    },
-    completed(payload: { instance: Transition; }) {
-      return payload != null;
-    }
-  },
+  emits: ["started", "paused", "resumed", "stopped", "completed"],
   slots: Object as SlotsType<{
     default: { value: NumberLike; };
   }>,
