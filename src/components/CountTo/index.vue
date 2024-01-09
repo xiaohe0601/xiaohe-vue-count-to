@@ -43,7 +43,7 @@ export default defineComponent({
     default: { value: NumberLike; };
   }>,
   setup(props, { emit, slots, expose }) {
-    const tweened = ref<NumberLike>(0);
+    const tweened = ref<NumberLike>(props.value);
 
     const options = computed<TransitionOptions>(() => {
       return {
