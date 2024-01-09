@@ -38,7 +38,7 @@ export default defineComponent({
       default: -1
     }
   },
-  emits: ["started", "paused", "resumed", "stopped", "completed"],
+  emits: ["change", "started", "paused", "resumed", "stopped", "completed"],
   slots: Object as SlotsType<{
     default: { value: NumberLike; };
   }>,
@@ -70,8 +70,12 @@ export default defineComponent({
       };
     });
 
-    const transition: Transition = new Transition(options.value, (value) => {
-      tweened.value = value.toFixed(Number(props.decimals)) as NumberLike;
+    const transition: Transition = new Transition(options.value, (value, instance) => {
+      const formatted: NumberLike = value.toFixed(Number(props.decimals)) as NumberLike;
+
+      tweened.value = formatted;
+
+      emit("change", formatted, instance);
     });
 
     watch(options, (value) => {
