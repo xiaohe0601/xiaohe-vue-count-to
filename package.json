@@ -1,7 +1,7 @@
 {
   "name": "xiaohe-vue-count-to",
   "type": "module",
-  "version": "0.2.0-beta.4",
+  "version": "0.2.0",
   "packageManager": "pnpm@8.14.0",
   "description": "⏱️ 一个实现数字平滑变化的Vue小组件",
   "author": "xiaohe0601 <HeDianGeng0601@outlook.com>",
