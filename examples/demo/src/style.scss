@@ -1,0 +1,15 @@
+html {
+  font-family: MiSans, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+html, body, #app {
+  --at-apply: w-full h-full;
+}
+
+#app {
+  --at-apply: text-14px text-black;
+}
+
+.app-container {
+  --at-apply: w-980px mx-a;
+}

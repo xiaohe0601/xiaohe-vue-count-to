@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ress": "^5.0.2",
     "xiaohe-vue-count-to": "workspace:^"
+  },
+  "devDependencies": {
+    "naive-ui": "^2.37.3",
+    "unocss": "^0.58.3"
   }
 }
