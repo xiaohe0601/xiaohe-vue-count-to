@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.5",
     "xiaohe-vue-count-to": "workspace:^"
   }
 }
