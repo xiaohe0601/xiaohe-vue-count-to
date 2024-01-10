@@ -2,6 +2,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import VuePlugin from "@vitejs/plugin-vue";
 import DtsPlugin from "vite-plugin-dts";
+import Autoprefixer from "autoprefixer";
 
 function resolve(...paths: string[]): string {
   return path.resolve(__dirname, ...paths);
@@ -33,5 +34,10 @@ export default defineConfig({
     DtsPlugin({
       rollupTypes: true
     })
-  ]
+  ],
+  css: {
+    postcss: {
+      plugins: [Autoprefixer()]
+    }
+  }
 });
