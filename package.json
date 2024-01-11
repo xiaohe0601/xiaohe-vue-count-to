@@ -7,7 +7,7 @@
   "author": "xiaohe0601 <HeDianGeng0601@outlook.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/xiaohe0601",
-  "homepage": "https://github.com/xiaohe0601/xiaohe-vue-count-to#readme",
+  "homepage": "https://count-to.netlify.app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xiaohe0601/xiaohe-vue-count-to.git"
