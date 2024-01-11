@@ -106,7 +106,7 @@ onMounted(() => {
 
 |名称|说明|类型|
 |---|---|---|
-|default|默认内容|{ value: `NumberLike`; }|
+|default|默认内容|{ value: `string` }|
 
 #### 实例（Inst）
 
