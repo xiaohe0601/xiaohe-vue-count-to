@@ -33,7 +33,9 @@ jobs:
           nci
 
       - name: Build
-        run: nr build:demo
+        run: |
+          nr build
+          nr build:demo
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
