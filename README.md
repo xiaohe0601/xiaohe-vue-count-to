@@ -23,6 +23,10 @@
 - 🍳 支持免费商用
 - 🥗 更多特性等你发掘...
 
+### 🎮 示例
+
+> [试一试](https://count-to.netlify.app)在线DEMO
+
 ### 🚁 安装
 
 #### PNPM
@@ -77,6 +81,90 @@ onMounted(() => {
 });
 </script>
 ```
+
+#### 控制动画
+
+- 仅 `Vue 3` 可直接通过 `ref` 获取到 `xiaohe-transition` 实例用于控制动画
+
+  ``` vue
+  <template>
+    <count-to ref="counter" :value="pandora">
+      <template #default="{ value }">
+        <span>{{ value }}</span>
+      </template>
+    </count-to>
+  </template>
+
+  <script lang="ts" setup>
+  import { ref } from "vue";
+  import type { CountToInst } from "xiaohe-vue-count-to";
+  import { CountTo } from "xiaohe-vue-count-to";
+
+  const counter = ref<CountToInst | null>(null);
+
+  const pandora = ref<number>(0);
+
+  /**
+   * 暂停
+   */
+  function pause(): void {
+    counter.value?.transition.pause();
+  }
+
+  /**
+   * 继续
+   */
+  function resume(): void {
+    counter.value?.transition.resume();
+  }
+  </script>
+  ```
+
+- `Vue 2/3` 均可通过 `inited` 事件获取到 `xiaohe-transition` 实例用于控制动画
+
+  ``` vue
+  <template>
+    <count-to :value="pandora" @inited="onCounterInited">
+      <template #default="{ value }">
+        <span>{{ value }}</span>
+      </template>
+    </count-to>
+  </template>
+
+  <script lang="ts">
+  import type { Transition } from "xiaohe-transition";
+  import { CountTo } from "xiaohe-vue-count-to";
+
+  export default {
+    components: { CountTo },
+    data() {
+      return {
+        pandora: 0
+      };
+    },
+    created() {
+      this.transition = null;
+    },
+    methods: {
+      onCounterInited(transition: Transition) {
+        this.transition = transition;
+      },
+      /**
+       * 暂停
+       */
+      pause() {
+        this.transition?.pause();
+      },
+      /**
+       * 继续
+       */
+      resume() {
+        this.transition?.resume();
+      }
+    }
+  };
+  </script>
+  ```
 
 #### 属性（Props）
 
