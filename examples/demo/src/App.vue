@@ -1,5 +1,11 @@
 <template>
   <n-config-provider abstract inline-theme-disabled>
+    <a class="absolute top-20px right-20px z-1 text-black active:text-blue" href="https://github.com/xiaohe0601/xiaohe-vue-count-to" target="_blank">
+      <n-icon size="40">
+        <logo-github></logo-github>
+      </n-icon>
+    </a>
+
     <n-scrollbar class="h-full">
       <n-flex class="app-container" vertical>
         <n-flex class="h-140px" align="center" justify="center" vertical>
@@ -67,12 +73,13 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from "vue";
 import type { SelectOption } from "naive-ui";
-import { NButton, NCard, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NInputNumber, NScrollbar, NSelect } from "naive-ui";
+import { NButton, NCard, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NIcon, NInputNumber, NScrollbar, NSelect } from "naive-ui";
 import { BezierCurvePreset } from "xiaohe-transition";
 import type { CountToInst, CountToProps } from "xiaohe-vue-count-to";
 import { CountTo } from "xiaohe-vue-count-to";
-import { ref } from "vue";
+import { LogoGithub } from "@vicons/ionicons5";
 import type { NullableObject } from "./types";
 
 const counter = ref<NullableObject<CountToInst>>(null);
