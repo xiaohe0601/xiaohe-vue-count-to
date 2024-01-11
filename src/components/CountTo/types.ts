@@ -72,7 +72,7 @@ export interface CountToEmits {
 }
 
 export interface CountToSlots {
-  default(props: { value: NumberLike; }): any;
+  default(props: { value: string; }): any;
 }
 
 export interface CountToInst {

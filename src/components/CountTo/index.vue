@@ -40,10 +40,10 @@ export default defineComponent({
   },
   emits: ["inited", "change", "started", "paused", "resumed", "stopped", "completed"],
   slots: Object as SlotsType<{
-    default: { value: NumberLike; };
+    default: { value: string; };
   }>,
   setup(props, { emit, slots, expose }) {
-    const tweened = ref<NumberLike>(props.value);
+    const tweened = ref<string>(String(props.value));
 
     const options = computed<TransitionOptions>(() => {
       return {
@@ -71,7 +71,7 @@ export default defineComponent({
     });
 
     const transition: Transition = new Transition(options.value, (value, instance) => {
-      const formatted: NumberLike = value.toFixed(Number(props.decimals)) as NumberLike;
+      const formatted: string = value.toFixed(Number(props.decimals));
 
       tweened.value = formatted;
 
