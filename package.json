@@ -44,8 +44,11 @@
   ],
   "scripts": {
     "serve": "vite",
+    "serve:demo": "nr --dir examples/demo serve",
     "build": "vite build",
+    "build:demo": "nr --dir examples/demo build",
     "preview": "vite preview",
+    "preview:demo": "nr --dir examples/demo preview",
     "release": "nr build && bumpp && npm publish",
     "test": "vitest",
     "test:ui": "vitest --ui",
