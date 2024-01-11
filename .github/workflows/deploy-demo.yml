@@ -36,6 +36,7 @@ jobs:
         run: |
           nr build
           nr build:demo
+          > examples/demo/dist/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
