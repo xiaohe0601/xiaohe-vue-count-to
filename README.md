@@ -25,7 +25,11 @@
 
 ### 🎮 示例
 
-> [试一试](https://count-to.netlify.app)在线DEMO
+<div align="center">
+  <img width="600" src="./readme/xiaohe-vue-count-to.gif" alt="xiaohe-vue-count-to" />
+</div>
+
+> 还可以[试一试](https://count-to.netlify.app)在线DEMO
 
 ### 🚁 安装
 
