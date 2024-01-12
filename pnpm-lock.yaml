@@ -106,9 +106,6 @@ importers:
         specifier: workspace:^
         version: link:../..
     devDependencies:
-      '@vicons/ionicons5':
-        specifier: ^0.12.0
-        version: 0.12.0
       naive-ui:
         specifier: ^2.37.3
         version: 2.37.3(vue@3.4.7)
@@ -1668,10 +1665,6 @@ packages:
       vite: 5.0.11(@types/node@20.10.8)(sass@1.69.7)
     transitivePeerDependencies:
       - rollup
-    dev: true
-
-  /@vicons/ionicons5@0.12.0:
-    resolution: {integrity: sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==}
     dev: true
 
   /@vitejs/plugin-vue@5.0.2(vite@5.0.11)(vue@3.4.7):

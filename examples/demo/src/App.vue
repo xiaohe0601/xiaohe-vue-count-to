@@ -1,16 +1,34 @@
 <template>
   <n-config-provider abstract inline-theme-disabled>
-    <a class="absolute top-20px right-20px z-1 text-black active:text-blue" href="https://github.com/xiaohe0601/xiaohe-vue-count-to" target="_blank">
-      <n-icon size="40">
-        <logo-github></logo-github>
-      </n-icon>
-    </a>
-
     <n-scrollbar class="h-full">
       <n-flex class="app-container" vertical>
         <n-flex class="h-140px" align="center" justify="center" vertical>
           <span class="text-40px font-bold">xiaohe-vue-count-to</span>
           <span class="text-20px text-black/60">⏱️ 一个实现数字平滑变化的Vue小组件</span>
+        </n-flex>
+
+        <n-flex class="h-60px" align="center" justify="center">
+          <a href="https://gitee.com/xiaohe0601/xiaohe-vue-count-to">
+            <n-image src="https://gitee.com/xiaohe0601/xiaohe-vue-count-to/badge/star.svg?theme=dark" preview-disabled></n-image>
+          </a>
+          <a href="https://github.com/xiaohe0601/xiaohe-vue-count-to">
+            <n-image src="https://img.shields.io/github/stars/xiaohe0601/xiaohe-vue-count-to?style=flat&colorA=080f12&colorB=1fa669&logo=GitHub" preview-disabled></n-image>
+          </a>
+          <a href="https://npmjs.com/package/xiaohe-vue-count-to">
+            <n-image src="https://img.shields.io/npm/v/xiaohe-vue-count-to?style=flat&colorA=080f12&colorB=1fa669" preview-disabled></n-image>
+          </a>
+          <a href="https://npmjs.com/package/xiaohe-vue-count-to">
+            <n-image src="https://img.shields.io/npm/dm/xiaohe-vue-count-to?style=flat&colorA=080f12&colorB=1fa669" preview-disabled></n-image>
+          </a>
+          <a href="https://bundlephobia.com/result?p=xiaohe-vue-count-to">
+            <n-image src="https://img.shields.io/bundlephobia/minzip/xiaohe-vue-count-to?style=flat&colorA=080f12&colorB=1fa669&label=minzip" preview-disabled></n-image>
+          </a>
+          <a href="https://www.jsdocs.io/package/xiaohe-vue-count-to">
+            <n-image src="https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669" preview-disabled></n-image>
+          </a>
+          <a href="https://github.com/xiaohe0601/xiaohe-vue-count-to/blob/main/LICENSE">
+            <n-image src="https://img.shields.io/github/license/xiaohe0601/xiaohe-vue-count-to.svg?style=flat&colorA=080f12&colorB=1fa669" preview-disabled></n-image>
+          </a>
         </n-flex>
 
         <n-card>
@@ -75,11 +93,10 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import type { SelectOption } from "naive-ui";
-import { NButton, NCard, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NIcon, NInputNumber, NScrollbar, NSelect } from "naive-ui";
+import { NButton, NCard, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NImage, NInputNumber, NScrollbar, NSelect } from "naive-ui";
 import { BezierCurvePreset } from "xiaohe-transition";
 import type { CountToInst, CountToProps } from "xiaohe-vue-count-to";
 import { CountTo } from "xiaohe-vue-count-to";
-import { LogoGithub } from "@vicons/ionicons5";
 import type { NullableObject } from "./types";
 
 const counter = ref<NullableObject<CountToInst>>(null);
