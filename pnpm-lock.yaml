@@ -15,8 +15,8 @@ importers:
         specifier: ^0.14.6
         version: 0.14.6(vue@3.4.7)
       xiaohe-transition:
-        specifier: ^1.0.7
-        version: 1.0.7
+        specifier: ^1.0.8
+        version: 1.0.8
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.6.2
@@ -5444,8 +5444,8 @@ packages:
       signal-exit: 4.1.0
     dev: true
 
-  /xiaohe-transition@1.0.7:
-    resolution: {integrity: sha512-kc+abEuxHHTzJj3jzurRCgtPLHeIbaUoDKYwAUQF2BxJaEXz2dXy1mxtSw6jYGXtqChi9J5ktMqULRP/b02N1w==}
+  /xiaohe-transition@1.0.8:
+    resolution: {integrity: sha512-dqskymjIjjnK1Zxa45dl3vC7plR2bCrkZzwltzwODfgh4z5z4nC+Kj5RKJRRW3fGy3uWXe/hh+NspYmZA8Hn7Q==}
     dependencies:
       bezier-easing: 2.1.0
     dev: false
