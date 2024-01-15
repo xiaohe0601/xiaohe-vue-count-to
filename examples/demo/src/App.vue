@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider abstract inline-theme-disabled>
+  <n-config-provider abstract inline-theme-disabled :locale="zhCN" :date-locale="dateZhCN">
     <n-scrollbar class="h-full">
       <n-flex class="app-container" vertical>
         <n-flex class="h-140px" align="center" justify="center" vertical>
@@ -116,7 +116,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import type { SelectOption } from "naive-ui";
-import { NButton, NCard, NCheckbox, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NImage, NInput, NInputNumber, NScrollbar, NSelect, NSwitch } from "naive-ui";
+import { NButton, NCard, NCheckbox, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NImage, NInput, NInputNumber, NScrollbar, NSelect, NSwitch, dateZhCN, zhCN } from "naive-ui";
 import { BezierCurvePreset } from "xiaohe-transition";
 import type { CountToInst, CountToProps } from "xiaohe-vue-count-to";
 import { CountTo } from "xiaohe-vue-count-to";
