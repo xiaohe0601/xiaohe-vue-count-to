@@ -41,7 +41,7 @@ export default defineComponent({
       type: String,
       default: "."
     },
-    useGroup: {
+    useGroupValue: {
       type: Boolean,
       default: false
     },
@@ -100,7 +100,7 @@ export default defineComponent({
       state.x1 = x[0];
       state.x2 = x.length > 1 ? `${props.decimal}${x[1]}` : "";
 
-      if (props.useGroup) {
+      if (props.useGroupValue) {
         const length = state.x1.length;
 
         for (let i = 0, j = 0, factor = 3; i < length; i += 1) {

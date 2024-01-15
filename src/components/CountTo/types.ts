@@ -34,22 +34,32 @@ export interface CountToProps {
   fps?: NumberLike;
   /**
    * 小数点
+   *
+   * @since 0.2.2
    */
   decimal?: string;
   /**
-   * 是否使用分组（示例：10000000.00 -> 10,000,000.00）
+   * 是否启用数值分组（示例：10000000.00 -> 10,000,000.00）
+   *
+   * @since 0.2.2
    */
-  useGroup?: boolean;
+  useGroupValue?: boolean;
   /**
-   * 是否使用印度风格分组（示例：10000000.00 -> 1,00,00,000.00）
+   * 是否使用印度风格数值分组（示例：10000000.00 -> 1,00,00,000.00）
+   *
+   * @since 0.2.2
    */
   useIndianStyleGroup?: boolean;
   /**
    * 分隔符
+   *
+   * @since 0.2.2
    */
   separator?: string;
   /**
    * 自定义数字
+   *
+   * @since 0.2.2
    */
   numerals?: string[];
 }
