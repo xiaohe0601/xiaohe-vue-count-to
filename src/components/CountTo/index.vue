@@ -122,8 +122,8 @@ export default defineComponent({
       }
 
       if (props.numerals != null && props.numerals.length > 0) {
-        state.x1 = state.x1.replace(/[0-9]/g, (w) => props.numerals![+w]);
-        state.x2 = state.x2.replace(/[0-9]/g, (w) => props.numerals![+w]);
+        state.x1 = state.x1.replace(/[0-9]/g, (w) => props.numerals![+w] ?? w);
+        state.x2 = state.x2.replace(/[0-9]/g, (w) => props.numerals![+w] ?? w);
       }
 
       return `${negative ? "-" : ""}${state.x1}${state.x2}`;
