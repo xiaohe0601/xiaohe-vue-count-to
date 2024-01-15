@@ -181,13 +181,18 @@ onMounted(() => {
 |bezier|自定义曲线（优先级高于preset）|`BezierCurve`|-|-|
 |delay|延迟开始时间（单位: ms）|`NumberLike`|-|0|
 |fps|帧率|`NumberLike`|-|-1|
+|decimal `0.2.2`|小数点|`string`|-|.|
+|use-group-value `0.2.2`|是否启用数值分组（示例：10000000.00 -> 10,000,000.00）|`boolean`|-|false|
+|use-indian-style-group `0.2.2`|是否使用印度风格数值分组（示例：10000000.00 -> 1,00,00,000.00）|`boolean`|-|false|
+|separator `0.2.2`|分隔符|`string`|-|,|
+|numerals `0.2.2`|自定义数字|`string[]`|-|-|
 
 #### 事件（Events）
 
 |事件|说明|回调参数|
 |---|---|---|
 |inited|`transition` 初始化完成|(instance: `Transition`)|
-|change|数值变化|(value: `NumberLike`, instance: `Transition`)|
+|change|数值变化|(value: `string`, instance: `Transition`)|
 |started|动画开始|(instance: `Transition`)|
 |paused|动画暂停|(instance: `Transition`)|
 |resumed|动画继续|(instance: `Transition`)|

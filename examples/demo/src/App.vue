@@ -39,7 +39,11 @@
                       :duration="state.duration"
                       :preset="state.preset"
                       :delay="state.delay"
-                      :fps="state.fps">
+                      :fps="state.fps"
+                      :decimal="state.decimal"
+                      :use-group-value="state.useGroupValue"
+                      :use-indian-style-group="state.useIndianStyleGroup"
+                      :separator="state.separator">
               <template #default="{ value }">
                 <span class="text-60px text-blue">{{ value }}</span>
               </template>
@@ -60,6 +64,25 @@
                 <n-input-number v-model:value="state.duration" :min="0" :step="100">
                   <template #suffix>毫秒</template>
                 </n-input-number>
+              </n-descriptions-item>
+
+              <n-descriptions-item label="小数点">
+                <n-input v-model:value="state.decimal"></n-input>
+              </n-descriptions-item>
+
+              <n-descriptions-item label="数值分组">
+                <n-flex class="h-34px" align="center">
+                  <n-switch v-model:value="state.useGroupValue">
+                    <template #checked>启用</template>
+                    <template #unchecked>禁用</template>
+                  </n-switch>
+
+                  <n-checkbox v-model:checked="state.useIndianStyleGroup" :disabled="!state.useGroupValue">印度风格</n-checkbox>
+                </n-flex>
+              </n-descriptions-item>
+
+              <n-descriptions-item label="分隔符">
+                <n-input v-model:value="state.separator" :disabled="!state.useGroupValue"></n-input>
               </n-descriptions-item>
 
               <n-descriptions-item label="动画曲线">
@@ -93,7 +116,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import type { SelectOption } from "naive-ui";
-import { NButton, NCard, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NImage, NInputNumber, NScrollbar, NSelect } from "naive-ui";
+import { NButton, NCard, NCheckbox, NConfigProvider, NDescriptions, NDescriptionsItem, NFlex, NImage, NInput, NInputNumber, NScrollbar, NSelect, NSwitch } from "naive-ui";
 import { BezierCurvePreset } from "xiaohe-transition";
 import type { CountToInst, CountToProps } from "xiaohe-vue-count-to";
 import { CountTo } from "xiaohe-vue-count-to";
@@ -103,12 +126,19 @@ const counter = ref<NullableObject<CountToInst>>(null);
 
 const pandora = ref<number>(0);
 
-const state = ref<Pick<CountToProps, "decimals" | "duration" | "preset" | "delay" | "fps">>({
+const state = ref<Pick<
+  CountToProps,
+  "decimals" | "duration" | "preset" | "delay" | "fps" | "decimal" | "useGroupValue" | "useIndianStyleGroup" | "separator"
+>>({
   decimals: 0,
   duration: 2000,
   preset: BezierCurvePreset.LINEAR,
   delay: 0,
-  fps: -1
+  fps: -1,
+  decimal: ".",
+  useGroupValue: false,
+  useIndianStyleGroup: false,
+  separator: ","
 });
 
 const presets = ref<SelectOption[]>([
