@@ -35,31 +35,31 @@ export interface CountToProps {
   /**
    * 小数点
    *
-   * @since 0.2.2
+   * @since 0.3.0
    */
   decimal?: string;
   /**
    * 是否启用数值分组（示例：10000000.00 -> 10,000,000.00）
    *
-   * @since 0.2.2
+   * @since 0.3.0
    */
   useGroupValue?: boolean;
   /**
    * 是否使用印度风格数值分组（示例：10000000.00 -> 1,00,00,000.00）
    *
-   * @since 0.2.2
+   * @since 0.3.0
    */
   useIndianStyleGroup?: boolean;
   /**
    * 分隔符
    *
-   * @since 0.2.2
+   * @since 0.3.0
    */
   separator?: string;
   /**
    * 自定义数字
    *
-   * @since 0.2.2
+   * @since 0.3.0
    */
   numerals?: string[];
 }
