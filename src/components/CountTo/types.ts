@@ -32,6 +32,26 @@ export interface CountToProps {
    * 帧率（即每秒回调多少次，若小于或等于0则使用requestAnimationFrame自动处理）
    */
   fps?: NumberLike;
+  /**
+   * 小数点
+   */
+  decimal?: string;
+  /**
+   * 是否使用分组（示例：10000000.00 -> 10,000,000.00）
+   */
+  useGroup?: boolean;
+  /**
+   * 是否使用印度风格分组（示例：10000000.00 -> 1,00,00,000.00）
+   */
+  useIndianStyleGroup?: boolean;
+  /**
+   * 分隔符
+   */
+  separator?: string;
+  /**
+   * 自定义数字
+   */
+  numerals?: string[];
 }
 
 export interface CountToEmits {
@@ -43,7 +63,7 @@ export interface CountToEmits {
   /**
    * 数值变化
    */
-  (e: "change", value: NumberLike, instance: Transition): void;
+  (e: "change", value: string, instance: Transition): void;
 
   /**
    * 动画开始

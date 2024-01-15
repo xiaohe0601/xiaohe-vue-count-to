@@ -36,6 +36,25 @@ export default defineComponent({
     fps: {
       type: [Number, String] as PropType<NumberLike>,
       default: -1
+    },
+    decimal: {
+      type: String,
+      default: "."
+    },
+    useGroup: {
+      type: Boolean,
+      default: false
+    },
+    useIndianStyleGroup: {
+      type: Boolean,
+      default: false
+    },
+    separator: {
+      type: String,
+      default: ","
+    },
+    numerals: {
+      type: Array as PropType<string[]>
     }
   },
   emits: ["inited", "change", "started", "paused", "resumed", "stopped", "completed"],
@@ -43,8 +62,6 @@ export default defineComponent({
     default: { value: string; };
   }>,
   setup(props, { emit, slots, expose }) {
-    const tweened = ref<string>(String(props.value));
-
     const options = computed<TransitionOptions>(() => {
       return {
         duration: Number(props.duration),
@@ -70,14 +87,60 @@ export default defineComponent({
       };
     });
 
-    const transition: Transition = new Transition(options.value, (value, instance) => {
-      const formatted: string = value.toFixed(Number(props.decimals));
+    const tweened = ref<number>(Number(props.value));
 
-      tweened.value = formatted;
+    function formatValue(value: number): string {
+      const negative: boolean = value < 0;
 
-      emit("change", formatted, instance);
+      const state: { result: string; x1: string; x2: string; x3: string; } = { result: "", x1: "", x2: "", x3: "" };
+
+      state.result = String(Math.abs(value).toFixed(Number(props.decimals)));
+
+      const x: string[] = state.result.split(".");
+      state.x1 = x[0];
+      state.x2 = x.length > 1 ? `${props.decimal}${x[1]}` : "";
+
+      if (props.useGroup) {
+        const length = state.x1.length;
+
+        for (let i = 0, j = 0, factor = 3; i < length; i += 1) {
+          if (props.useIndianStyleGroup && i === 4) {
+            factor = 2;
+            j = 1;
+          }
+
+          if (i !== 0 && (j % factor) === 0) {
+            state.x3 = `${props.separator}${state.x3}`;
+          }
+
+          j += 1;
+
+          state.x3 = `${state.x1[length - i - 1]}${state.x3}`;
+        }
+
+        state.x1 = state.x3;
+      }
+
+      if (props.numerals != null && props.numerals.length > 0) {
+        state.x1 = state.x1.replace(/[0-9]/g, (w) => props.numerals![+w]);
+        state.x2 = state.x2.replace(/[0-9]/g, (w) => props.numerals![+w]);
+      }
+
+      return `${negative ? "-" : ""}${state.x1}${state.x2}`;
+    }
+
+    const formatted = computed<string>(() => {
+      return formatValue(tweened.value);
+    });
+
+    const transition: Transition = new Transition(options.value, (value) => {
+      tweened.value = value;
     });
     emit("inited", transition);
+
+    watch(formatted, (value) => {
+      emit("change", value, transition);
+    });
 
     watch(options, (value) => {
       transition.options(value);
@@ -99,7 +162,7 @@ export default defineComponent({
     });
 
     return () => {
-      return h("div", { class: `${CLASS_PREFIX}-count-to` }, [slots.default?.({ value: tweened.value })]);
+      return h("div", { class: `${CLASS_PREFIX}-count-to` }, [slots.default?.({ value: formatted.value })]);
     };
   }
 });
