@@ -135,8 +135,7 @@ onMounted(() => {
     </count-to>
   </template>
 
-  <script lang="ts">
-  import type { Transition } from "xiaohe-transition";
+  <script>
   import { CountTo } from "xiaohe-vue-count-to";
 
   export default {
@@ -150,7 +149,7 @@ onMounted(() => {
       this.transition = null;
     },
     methods: {
-      onCounterInited(transition: Transition) {
+      onCounterInited(transition) {
         this.transition = transition;
       },
       /**
