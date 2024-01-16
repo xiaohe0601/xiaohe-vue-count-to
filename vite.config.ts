@@ -17,11 +17,12 @@ export default defineConfig({
       fileName: "index"
     },
     rollupOptions: {
-      external: ["vue", "vue-demi"],
+      external: ["vue", "vue-demi", "xiaohe-transition"],
       output: {
         globals: {
           "vue": "Vue",
-          "vue-demi": "VueDemi"
+          "vue-demi": "VueDemi",
+          "xiaohe-transition": "XhTransition"
         }
       }
     }
