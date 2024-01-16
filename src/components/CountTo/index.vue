@@ -3,7 +3,7 @@ import type { PropType, SlotsType } from "vue-demi";
 import { computed, defineComponent, h, onUnmounted, ref, watch } from "vue-demi";
 import type { BezierCurve, TransitionOptions } from "xiaohe-transition";
 import { BezierCurvePreset, Transition } from "xiaohe-transition";
-import type { NumberLike } from "../../types.ts";
+import type { NumberLike, OptionalString } from "../../types.ts";
 import { CLASS_PREFIX } from "../../constant.ts";
 import type { BezierCurvePresetLike } from "./types.ts";
 
@@ -122,8 +122,14 @@ export default defineComponent({
       }
 
       if (props.numerals != null && props.numerals.length > 0) {
-        state.x1 = state.x1.replace(/[0-9]/g, (w) => props.numerals![+w] ?? w);
-        state.x2 = state.x2.replace(/[0-9]/g, (w) => props.numerals![+w] ?? w);
+        state.x1 = state.x1.replace(/[0-9]/g, (w) => {
+          const n: OptionalString = props.numerals![+w];
+          return n === undefined ? w : n;
+        });
+        state.x2 = state.x2.replace(/[0-9]/g, (w) => {
+          const n: OptionalString = props.numerals![+w];
+          return n === undefined ? w : n;
+        });
       }
 
       return `${negative ? "-" : ""}${state.x1}${state.x2}`;
