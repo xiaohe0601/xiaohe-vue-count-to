@@ -12,7 +12,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-小何同学 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
+小何 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
 
 ### 🎉 特性
 
@@ -221,7 +221,7 @@ onMounted(() => {
 ### 🐶 讨论交流
 
 - ❓：若有疑问或BUG反馈，可提交[issues](https://github.com/xiaohe0601/xiaohe-vue-count-to/issues)
-- 📫：[HeDianGeng0601@outlook.com](mailto:HeDianGeng0601@outlook.com)
+- 📫：[xiaohe0601@outlook.com](mailto:xiaohe0601@outlook.com)
 - 🐧：暂未开通
 
 ### 🏆 开源协议
